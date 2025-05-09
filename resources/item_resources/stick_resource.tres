@@ -8,4 +8,5 @@ script = ExtResource("1_u8t48")
 item_key = 0
 display_name = "Stick"
 icon = ExtResource("1_dekyg")
+description = "A dry stick."
 metadata/_custom_type_script = "uid://yntwpkk31gjf"
