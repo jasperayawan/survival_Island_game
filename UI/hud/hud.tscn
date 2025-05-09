@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc70qkfrdg354"]
+[gd_scene load_steps=3 format=3 uid="uid://bc70qkfrdg354"]
 
+[ext_resource type="Script" uid="uid://cgf2kadgjvck7" path="res://UI/hud/hud.gd" id="1_upt0d"]
 [ext_resource type="Texture2D" uid="uid://c6tkcgdyalgmw" path="res://textures/circle32.png" id="1_ygoxw"]
 
 [node name="HUD" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_upt0d")
 
 [node name="Crosshair" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(4, 4)
