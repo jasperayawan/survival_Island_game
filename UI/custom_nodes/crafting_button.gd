@@ -1,6 +1,7 @@
 extends TextureRect
 
 @onready var icon_texture_rect: TextureRect = $MarginContainer/IconTextureRect
+@onready var button: Button = $Button
 
 var item_key
 

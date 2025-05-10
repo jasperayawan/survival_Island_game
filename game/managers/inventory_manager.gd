@@ -9,6 +9,8 @@ func _enter_tree() -> void:
 	EventSystem.INV_try_to_pickup_item.connect(try_to_pickup_item)
 	EventSystem.INV_ask_update_inventory.connect(send_inventory)
 	EventSystem.INV_switch_two_item_indexes.connect(switch_two_item_indexes)
+	EventSystem.INV_add_item.connect(add_item)
+	EventSystem.INV_delete_crafting_blueprint_costs.connect(delete_crafting_blueprint_costs)
 
 # So this line it creates now 28 elements in the inventory and
 # the elements value will be null
@@ -34,10 +36,23 @@ func add_item(item_key : ItemConfig.Keys) -> void:
 	for i in inventory.size():
 		if inventory[i] == null:
 			inventory[i] = item_key
-			break
+			break 
+	
+	send_inventory()
 
 func switch_two_item_indexes(idx1 : int, idx2 : int) -> void:
 	var item_key1 = inventory[idx1]
 	inventory[idx1] = inventory[idx2]
 	inventory[idx2] = item_key1
 	send_inventory()
+
+func delete_crafting_blueprint_costs(costs : Array[BlueprintCostData]) -> void:
+	for cost in costs:
+		for _i in cost.amount:
+			delete_item(cost.item_key)
+
+func delete_item(item_key : ItemConfig.Keys) -> void:
+	if not inventory.has(item_key):
+		return 
+	# delete the last index of where this item key was found in the inventory
+	inventory[inventory.rfind(item_key)] = null

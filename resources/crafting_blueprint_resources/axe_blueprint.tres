@@ -25,4 +25,6 @@ metadata/_custom_type_script = "uid://8c6e3eoagq35"
 script = ExtResource("2_3jrdb")
 item_key = 10
 costs = Array[ExtResource("1_iflvo")]([SubResource("Resource_iflvo"), SubResource("Resource_3jrdb"), SubResource("Resource_ypfsd")])
+needs_multitool = false
+needs_tinderbox = false
 metadata/_custom_type_script = "uid://dovwmoq66l5gj"

@@ -7,6 +7,8 @@ signal INV_try_to_pickup_item
 signal INV_ask_update_inventory
 signal INV_inventory_updated
 signal INV_switch_two_item_indexes
+signal INV_add_item
+signal INV_delete_crafting_blueprint_costs
 
 signal PLA_freeze_player
 signal PLA_unfreeze_player
