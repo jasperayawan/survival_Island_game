@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5fw0jgov7tws"]
+
+[ext_resource type="PackedScene" uid="uid://76xc5lyveadq" path="res://items/equippables/equippable_item_template.tscn" id="1_pj54i"]
+[ext_resource type="Script" uid="uid://5xkqe4ativ13" path="res://items/equippables/equippable_weapon.gd" id="2_0jjp0"]
+
+[node name="EquippableWeaponTemplate" instance=ExtResource("1_pj54i")]
+script = ExtResource("2_0jjp0")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="0"]
+
+[node name="MeshHolder2" type="Node3D" parent="." index="1"]
+
+[node name="HitCheckMarker3D" type="Marker3D" parent="." index="4"]

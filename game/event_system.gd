@@ -16,3 +16,9 @@ signal PLA_unfreeze_player
 
 signal UI_hide_HUD
 signal UI_unhide_HUD
+
+
+signal EQU_hotkey_pressed
+signal EQU_equip_item
+signal EQU_unequip_item
+signal EQU_active_hotbar_slot_updated

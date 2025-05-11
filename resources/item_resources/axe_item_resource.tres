@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WeaponItemResource" load_steps=3 format=3 uid="uid://brql0qc7i6g83"]
+
+[ext_resource type="Script" uid="uid://df8p6gjgndte1" path="res://resources/item_resources/weapon_item_resouce.gd" id="1_1rh15"]
+[ext_resource type="Texture2D" uid="uid://caxuqurd41gbq" path="res://textures/item_icons/axe.png" id="1_kf5v6"]
+
+[resource]
+script = ExtResource("1_1rh15")
+damage = 20.0
+range = 1.5
+item_key = 10
+display_name = "Axe"
+icon = ExtResource("1_kf5v6")
+description = "A DIY axe."
+is_quippable = true
+metadata/_custom_type_script = "uid://df8p6gjgndte1"
