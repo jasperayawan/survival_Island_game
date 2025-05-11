@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b25cyr2mlm7ik"]
+
+[ext_resource type="Script" uid="uid://bd2n4k66k8qfu" path="res://items/interactables/pickuppable.gd" id="1_n5jy0"]
+
+[node name="RigidPickuppableTemplate" type="RigidBody3D"]
+collision_layer = 48
+collision_mask = 81
+
+[node name="Pickuppable" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_n5jy0")
+metadata/_custom_type_script = "uid://bd2n4k66k8qfu"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickuppable"]
