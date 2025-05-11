@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc70qkfrdg354"]
+[gd_scene load_steps=5 format=3 uid="uid://bc70qkfrdg354"]
 
 [ext_resource type="Script" uid="uid://cgf2kadgjvck7" path="res://UI/hud/hud.gd" id="1_upt0d"]
 [ext_resource type="Texture2D" uid="uid://c6tkcgdyalgmw" path="res://textures/circle32.png" id="1_ygoxw"]
+[ext_resource type="PackedScene" uid="uid://m8thutjkofiy" path="res://UI/custom_nodes/hotbar_slot.tscn" id="3_8nfoq"]
+[ext_resource type="Script" uid="uid://c7x8htj7lcx73" path="res://UI/hud/hotbar_ui.gd" id="3_b4xaq"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -28,3 +30,49 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ygoxw")
 expand_mode = 1
+
+[node name="HotbarMarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HotbarSlotContainer" type="HBoxContainer" parent="HotbarMarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 32
+alignment = 1
+script = ExtResource("3_b4xaq")
+
+[node name="HotbarSlot" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot2" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot3" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot4" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot5" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot6" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot7" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot8" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2
+
+[node name="HotbarSlot9" parent="HotbarMarginContainer/HotbarSlotContainer" instance=ExtResource("3_8nfoq")]
+layout_mode = 2

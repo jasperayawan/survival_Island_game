@@ -18,6 +18,10 @@ func _ready() -> void:
 	for inventory_slot in inventory_container.get_children():
 		inventory_slot.mouse_entered.connect(show_item_info.bind(inventory_slot))
 		inventory_slot.mouse_exited.connect(hide_item_info)
+	
+	for hotbar_slot in get_tree().get_nodes_in_group("HotbarSlots"):
+		hotbar_slot.mouse_entered.connect(show_item_info.bind(hotbar_slot))
+		hotbar_slot.mouse_exited.connect(hide_item_info)
 
 func close() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

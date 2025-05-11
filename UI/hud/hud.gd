@@ -7,7 +7,7 @@ func _ready() -> void:
 	EventSystem.UI_hide_HUD.connect(hide_hud)
 
 func unhide_hud() -> void:
-	$".".visible = true
+	$Crosshair.visible = true
 
 func hide_hud() -> void:
-	$".".visible = false
+	$Crosshair.visible = false
