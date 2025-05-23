@@ -13,10 +13,13 @@ signal INV_delete_crafting_blueprint_costs
 
 signal PLA_freeze_player
 signal PLA_unfreeze_player
+signal PLA_change_energy
+signal PLA_energy_updated
+signal PLA_change_health
+signal PLA_health_updated
 
 signal UI_hide_HUD
 signal UI_unhide_HUD
-
 
 signal EQU_hotkey_pressed
 signal EQU_equip_item

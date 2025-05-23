@@ -87,9 +87,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59963, 0.0132747, 0.345545
 [node name="Spawner" parent="." instance=ExtResource("7_oew6e")]
 
 [node name="HittableTree" parent="." instance=ExtResource("7_072gb")]
-
-[node name="HittableTree2" parent="." instance=ExtResource("7_072gb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.09585, 0, 4.25984)
-
-[node name="HittableTree3" parent="." instance=ExtResource("7_072gb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49463, 0, 4.25984)

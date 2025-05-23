@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://gbk54tpp5ces"]
+[gd_scene load_steps=8 format=3 uid="uid://gbk54tpp5ces"]
 
 [ext_resource type="Script" uid="uid://kvr851oyljtd" path="res://actors/player/player.gd" id="1_nvxhs"]
 [ext_resource type="Script" uid="uid://cdna0qeq7uxt" path="res://actors/player/main_camera.gd" id="2_15y17"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://cadl8ngh5pge2" path="res://actors/player/equippable_item_holder.gd" id="3_6p1w3"]
 [ext_resource type="Script" uid="uid://bjvt0tfdcixy4" path="res://game/managers/inventory_manager.gd" id="3_ax26v"]
 [ext_resource type="Script" uid="uid://bgvinwwu8fac6" path="res://game/managers/equipped_item_manager.gd" id="4_lsqbn"]
-[ext_resource type="Script" uid="uid://cmpg2xm1pcl7e" path="res://game/managers/player_stats_manager.gd" id="7_bop6h"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6uhly"]
 radius = 0.25
@@ -33,7 +32,13 @@ collision_mask = 4
 collide_with_areas = true
 script = ExtResource("2_ilk7j")
 
+[node name="EquippableItemHolder" type="Node3D" parent="Head"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.687522, 0)
+script = ExtResource("3_6p1w3")
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Head"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -45,16 +50,12 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 gui_disable_input = true
-size = Vector2i(1536, 864)
-render_target_update_mode = 4
+size = Vector2i(1152, 648)
+render_target_update_mode = 0
 
 [node name="EqiuppableItemCamera" type="Camera3D" parent="Head/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 cull_mask = 1048574
-
-[node name="EquippableItemHolder" type="Node3D" parent="Head/SubViewportContainer/SubViewport/EqiuppableItemCamera"]
-unique_name_in_owner = true
-script = ExtResource("3_6p1w3")
 
 [node name="Managers" type="Node" parent="."]
 
@@ -63,6 +64,3 @@ script = ExtResource("3_ax26v")
 
 [node name="EquippedItemManager" type="Node" parent="Managers"]
 script = ExtResource("4_lsqbn")
-
-[node name="PlayerStatsManager" type="Node" parent="Managers"]
-script = ExtResource("7_bop6h")

@@ -6,8 +6,4 @@
 [node name="EquippableWeaponTemplate" instance=ExtResource("1_pj54i")]
 script = ExtResource("2_0jjp0")
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="0"]
-
-[node name="MeshHolder2" type="Node3D" parent="." index="1"]
-
-[node name="HitCheckMarker3D" type="Marker3D" parent="." index="4"]
+[node name="HitCheckMarker" type="Marker3D" parent="." index="2"]

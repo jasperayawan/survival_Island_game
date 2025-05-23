@@ -40,7 +40,7 @@ keycode = 4194305
 events = [SubResource("InputEventKey_vkgwg"), SubResource("InputEventKey_8u4li")]
 
 [node name="PlayerMenuBase" type="Control"]
-z_index = -1
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

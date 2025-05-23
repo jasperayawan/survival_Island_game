@@ -8,7 +8,7 @@ var current_health : float
 
 func _ready() -> void:
 	current_health = attributes.max_health
-	
+
 	if residue_static_body != null:
 		remove_child(residue_static_body)
 
@@ -17,7 +17,7 @@ func register_hit(weapon_item_resource : WeaponItemResource) -> void:
 		return
 	
 	current_health -= weapon_item_resource.damage
-	
+	print("health ", current_health)
 	if current_health <= 0:
 		die()
 
