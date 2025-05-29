@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://e6d3x80lafpl"]
+[gd_scene load_steps=15 format=3 uid="uid://e6d3x80lafpl"]
 
 [ext_resource type="PackedScene" uid="uid://djym4pftn4rdv" path="res://meshes/terrain.tscn" id="1_ete1y"]
 [ext_resource type="PackedScene" uid="uid://bwlgy4bprbklu" path="res://items/interactables/pickuppable_stick.tscn" id="2_oew6e"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b4wydbd6d838x" path="res://items/interactables/pickuppable_plant.tscn" id="6_udsrc"]
 [ext_resource type="PackedScene" uid="uid://dlrgyx727g6p6" path="res://objects/hittable_objects/hittable_tree.tscn" id="7_072gb"]
 [ext_resource type="PackedScene" uid="uid://d0tv1p2t8jm3v" path="res://game/managers/spawner.tscn" id="7_oew6e"]
+[ext_resource type="PackedScene" uid="uid://cdmn58lfuvqcc" path="res://items/interactables/pickuppable_mushroom.tscn" id="8_072gb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7of5j"]
 sky_top_color = Color(0.32549, 0.878431, 1, 1)
@@ -87,3 +88,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59963, 0.0132747, 0.345545
 [node name="Spawner" parent="." instance=ExtResource("7_oew6e")]
 
 [node name="HittableTree" parent="." instance=ExtResource("7_072gb")]
+
+[node name="PickuppableMushroom" parent="." instance=ExtResource("8_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.741249, 0.00716411, -3.28243)
+
+[node name="PickuppableMushroom2" parent="." instance=ExtResource("8_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54143, 0.00716411, -4.34741)
+
+[node name="PickuppableMushroom3" parent="." instance=ExtResource("8_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.588575, -0.0504729, -6.43776)

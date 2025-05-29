@@ -17,6 +17,7 @@ signal PLA_change_energy
 signal PLA_energy_updated
 signal PLA_change_health
 signal PLA_health_updated
+signal INV_delete_item_by_index
 
 signal UI_hide_HUD
 signal UI_unhide_HUD
@@ -25,5 +26,6 @@ signal EQU_hotkey_pressed
 signal EQU_equip_item
 signal EQU_unequip_item
 signal EQU_active_hotbar_slot_updated
+signal EQU_delete_equipped_item
 
 signal SPA_spawn_scene

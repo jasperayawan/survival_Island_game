@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdmn58lfuvqcc"]
+
+[ext_resource type="PackedScene" uid="uid://cqoyt7kpnxy14" path="res://items/interactables/pickuppable_template.tscn" id="1_hlkxo"]
+[ext_resource type="Script" uid="uid://bd2n4k66k8qfu" path="res://items/interactables/pickuppable.gd" id="2_pg2nc"]
+[ext_resource type="PackedScene" uid="uid://hrlaqosu8jvj" path="res://meshes/mushroom.tscn" id="3_hlkxo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pg2nc"]
+radius = 0.145452
+
+[node name="PickuppableMushroom" instance=ExtResource("1_hlkxo")]
+
+[node name="Pickuppable2" type="Area3D" parent="." index="0"]
+collision_layer = 4
+script = ExtResource("2_pg2nc")
+item_key = 3
+prompt = "Pickup mushroom"
+metadata/_custom_type_script = "uid://bd2n4k66k8qfu"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickuppable2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00457375, 0.116465, 0.0057472)
+shape = SubResource("SphereShape3D_pg2nc")
+
+[node name="Pickuppable" parent="." index="1"]
+item_key = 3
+
+[node name="Mushroom" parent="." index="2" instance=ExtResource("3_hlkxo")]
