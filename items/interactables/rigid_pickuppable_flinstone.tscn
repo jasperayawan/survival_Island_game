@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv3ccvy873mkt"]
+
+[ext_resource type="PackedScene" uid="uid://b25cyr2mlm7ik" path="res://items/interactables/rigid_pickuppable_template.tscn" id="1_rckd4"]
+[ext_resource type="PackedScene" uid="uid://c4u5rw2u6bhsg" path="res://meshes/flintstone.tscn" id="2_rckd4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g6wlj"]
+radius = 0.0993264
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fxwpd"]
+points = PackedVector3Array(0.00114315, -0.0793876, -0.0284172, -0.0788405, -0.0354933, -0.0560931, -0.0163276, -0.00964089, -0.100309, 0.0873287, -0.0329527, 0.00273275, 0.0375158, -0.0509774, 0.0918979, -0.0787911, -0.0583932, 0.0434168, -0.0807323, 0.0360215, -0.0216622, -0.041744, 0.0549388, -0.0888256, 0.0312151, 0.0573249, -0.0709154, 0.0626361, 0.0620628, 0.0500945, -0.00489428, 0.020795, 0.096858, 0.00234406, 0.0959834, 0.0089666)
+
+[node name="RigidPickuppableFlinstone" instance=ExtResource("1_rckd4")]
+collision_layer = 32
+collision_mask = 113
+
+[node name="Pickuppable" parent="." index="0"]
+item_key = 7
+prompt = "Pickup flinstone"
+
+[node name="CollisionShape3D" parent="Pickuppable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00647438, 0)
+shape = SubResource("SphereShape3D_g6wlj")
+
+[node name="Flintstone" parent="." index="1" instance=ExtResource("2_rckd4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+shape = SubResource("ConvexPolygonShape3D_fxwpd")

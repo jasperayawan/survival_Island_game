@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bsmprydi5xuix"]
+
+[ext_resource type="Texture2D" uid="uid://bndcxx6l0tv5o" path="res://textures/item_icons/coal.png" id="1_kcq5q"]
+[ext_resource type="Script" uid="uid://yntwpkk31gjf" path="res://resources/item_resources/item_resource.gd" id="2_ft2w1"]
+
+[resource]
+script = ExtResource("2_ft2w1")
+item_key = 6
+display_name = "Coal"
+icon = ExtResource("1_kcq5q")
+description = "A black lump of coal."
+is_quippable = false
+metadata/_custom_type_script = "uid://yntwpkk31gjf"

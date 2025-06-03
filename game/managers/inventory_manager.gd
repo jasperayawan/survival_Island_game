@@ -23,6 +23,7 @@ func _ready() -> void:
 	
 	# DELETE ME LATER
 	inventory[0] = ItemConfig.Keys.Axe
+	inventory[1] = ItemConfig.Keys.Pickaxe
 
 func send_inventory() -> void:
 	EventSystem.INV_inventory_updated.emit(inventory)

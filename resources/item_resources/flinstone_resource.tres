@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bydxde4vbxyf6"]
+
+[ext_resource type="Texture2D" uid="uid://ddbiuwgtu0wrl" path="res://textures/item_icons/flintstone.png" id="1_8s33p"]
+[ext_resource type="Script" uid="uid://yntwpkk31gjf" path="res://resources/item_resources/item_resource.gd" id="2_mtl23"]
+
+[resource]
+script = ExtResource("2_mtl23")
+item_key = 7
+display_name = "Flinstone"
+icon = ExtResource("1_8s33p")
+description = "A Flinstonel."
+is_quippable = false
+metadata/_custom_type_script = "uid://yntwpkk31gjf"

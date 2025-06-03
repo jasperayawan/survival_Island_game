@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://e6d3x80lafpl"]
+[gd_scene load_steps=17 format=3 uid="uid://e6d3x80lafpl"]
 
 [ext_resource type="PackedScene" uid="uid://djym4pftn4rdv" path="res://meshes/terrain.tscn" id="1_ete1y"]
 [ext_resource type="PackedScene" uid="uid://bwlgy4bprbklu" path="res://items/interactables/pickuppable_stick.tscn" id="2_oew6e"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dlrgyx727g6p6" path="res://objects/hittable_objects/hittable_tree.tscn" id="7_072gb"]
 [ext_resource type="PackedScene" uid="uid://d0tv1p2t8jm3v" path="res://game/managers/spawner.tscn" id="7_oew6e"]
 [ext_resource type="PackedScene" uid="uid://cdmn58lfuvqcc" path="res://items/interactables/pickuppable_mushroom.tscn" id="8_072gb"]
+[ext_resource type="PackedScene" uid="uid://cwjfpagtm1lhq" path="res://objects/hittable_objects/hittable_coal_boulder.tscn" id="9_mmhx3"]
+[ext_resource type="PackedScene" uid="uid://b4h6d1ne6kstm" path="res://objects/hittable_objects/hittable_flinstone_boulder.tscn" id="10_c52ef"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7of5j"]
 sky_top_color = Color(0.32549, 0.878431, 1, 1)
@@ -73,27 +75,272 @@ mesh = SubResource("PlaneMesh_6o72v")
 [node name="Player" parent="." instance=ExtResource("4_mmhx3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.07497, 0.249926, 1.75005)
 
-[node name="PickuppablePlant" parent="." instance=ExtResource("6_udsrc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.43822, 0.0132747, -0.512384)
-
-[node name="PickuppablePlant2" parent="." instance=ExtResource("6_udsrc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97642, 0.0132747, -0.512384)
-
-[node name="PickuppablePlant3" parent="." instance=ExtResource("6_udsrc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12414, 0.0132747, -0.102551)
-
-[node name="PickuppablePlant4" parent="." instance=ExtResource("6_udsrc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59963, 0.0132747, 0.345545)
-
 [node name="Spawner" parent="." instance=ExtResource("7_oew6e")]
 
-[node name="HittableTree" parent="." instance=ExtResource("7_072gb")]
+[node name="HittableObjects" type="Node" parent="."]
 
-[node name="PickuppableMushroom" parent="." instance=ExtResource("8_072gb")]
+[node name="Flinstones" type="Node" parent="HittableObjects"]
+
+[node name="HittableFlinstoneBoulder" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47028, 0, 3.02187)
+
+[node name="HittableFlinstoneBoulder2" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0082, 0, 3.67705)
+
+[node name="HittableFlinstoneBoulder3" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30325, 0, 3.58782)
+
+[node name="HittableFlinstoneBoulder4" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1758, 0, -1.91025)
+
+[node name="HittableFlinstoneBoulder5" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2776, 0, -2.09937)
+
+[node name="HittableFlinstoneBoulder6" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2776, 0, -2.09937)
+
+[node name="HittableFlinstoneBoulder7" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.134, 0, 7.59801)
+
+[node name="HittableFlinstoneBoulder8" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6078, 1.19209e-07, 19.9719)
+
+[node name="HittableFlinstoneBoulder9" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6078, 1.19209e-07, 19.9719)
+
+[node name="HittableFlinstoneBoulder10" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3643, 1.19209e-07, 16.9311)
+
+[node name="HittableFlinstoneBoulder11" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15667, 1.19209e-07, 21.9633)
+
+[node name="HittableFlinstoneBoulder12" parent="HittableObjects/Flinstones" instance=ExtResource("10_c52ef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6801, 1.19209e-07, 16.1878)
+
+[node name="Coals" type="Node" parent="HittableObjects"]
+
+[node name="HittableCoalBoulder" parent="HittableObjects/Coals" instance=ExtResource("9_mmhx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08924, 0, 1.55421)
+
+[node name="HittableCoalBoulder2" parent="HittableObjects/Coals" instance=ExtResource("9_mmhx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16257, 2.38419e-07, 3.90666)
+
+[node name="HittableCoalBoulder3" parent="HittableObjects/Coals" instance=ExtResource("9_mmhx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.59999, -2.38419e-07, 7.43736)
+
+[node name="HittableCoalBoulder5" parent="HittableObjects/Coals" instance=ExtResource("9_mmhx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9823, -2.38419e-07, -4.78284)
+
+[node name="HittableCoalBoulder6" parent="HittableObjects/Coals" instance=ExtResource("9_mmhx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3559, -4.76837e-07, -9.88523)
+
+[node name="HittableCoalBoulder4" parent="HittableObjects/Coals" instance=ExtResource("9_mmhx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16257, 2.38419e-07, 3.90666)
+
+[node name="Trees" type="Node" parent="HittableObjects"]
+
+[node name="HittableTree" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+
+[node name="HittableTree2" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64591, 0, 5.92331)
+
+[node name="HittableTree3" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13837, -4.76837e-07, 14.3537)
+
+[node name="HittableTree4" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8616, -4.76837e-07, 17.3537)
+
+[node name="HittableTree5" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.86163, -4.76837e-07, 28.3537)
+
+[node name="HittableTree6" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.79488, -4.76837e-07, 29.2744)
+
+[node name="HittableTree7" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7949, -4.76837e-07, 29.2744)
+
+[node name="HittableTree8" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7949, -4.76837e-07, 31.2744)
+
+[node name="HittableTree9" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8099, -4.76837e-07, 40.3142)
+
+[node name="HittableTree10" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80987, -4.76837e-07, 42.3142)
+
+[node name="HittableTree11" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.19013, -4.76837e-07, 40.3142)
+
+[node name="HittableTree12" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19013, -4.76837e-07, 48.3142)
+
+[node name="HittableTree13" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28921, -4.76837e-07, 48.4872)
+
+[node name="HittableTree14" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2892, -0.545019, 47.4872)
+
+[node name="HittableTree15" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2892, -1.23969, 54.4872)
+
+[node name="HittableTree16" parent="HittableObjects/Trees" instance=ExtResource("7_072gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2892, -2.53676, 53.4872)
+
+[node name="PickuppableObjects" type="Node" parent="."]
+
+[node name="Mushrooms" type="Node" parent="PickuppableObjects"]
+
+[node name="PickuppableMushroom" parent="PickuppableObjects/Mushrooms" instance=ExtResource("8_072gb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.741249, 0.00716411, -3.28243)
 
-[node name="PickuppableMushroom2" parent="." instance=ExtResource("8_072gb")]
+[node name="PickuppableMushroom2" parent="PickuppableObjects/Mushrooms" instance=ExtResource("8_072gb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54143, 0.00716411, -4.34741)
 
-[node name="PickuppableMushroom3" parent="." instance=ExtResource("8_072gb")]
+[node name="PickuppableMushroom3" parent="PickuppableObjects/Mushrooms" instance=ExtResource("8_072gb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.588575, -0.0504729, -6.43776)
+
+[node name="Plants" type="Node" parent="PickuppableObjects"]
+
+[node name="PickuppablePlant" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.43822, 0.0132747, -0.512384)
+
+[node name="PickuppablePlant2" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97642, 0.0132747, -0.512384)
+
+[node name="PickuppablePlant3" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12414, 0.0132747, -0.102551)
+
+[node name="PickuppablePlant4" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59963, 0.0132747, 0.345545)
+
+[node name="PickuppablePlant5" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.59963, 0.0132747, 3.34555)
+
+[node name="PickuppablePlant6" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59963, 0.0132747, 2.34555)
+
+[node name="PickuppablePlant7" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9977, 0.0132747, 4.30676)
+
+[node name="PickuppablePlant8" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.02, 0.0132747, 5.99489)
+
+[node name="PickuppablePlant9" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.02, 0.0132747, 9.99489)
+
+[node name="PickuppablePlant10" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.01998, 0.0132747, 10.9949)
+
+[node name="PickuppablePlant11" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.96628, 0.0132747, 12.8572)
+
+[node name="PickuppablePlant12" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96628, 0.0132747, 14.8572)
+
+[node name="PickuppablePlant13" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.96628, 0.0132747, 16.8572)
+
+[node name="PickuppablePlant14" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96628, 0.0132747, 19.8572)
+
+[node name="PickuppablePlant15" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96628, 0.0132747, 20.8572)
+
+[node name="PickuppablePlant16" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.96628, 0.0132747, 21.8572)
+
+[node name="PickuppablePlant17" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9663, 0.0132747, 20.8572)
+
+[node name="PickuppablePlant18" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.96628, 0.0132747, 23.8572)
+
+[node name="PickuppablePlant19" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9663, 0.0132747, 24.8572)
+
+[node name="PickuppablePlant20" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9663, 0.0132747, 22.8572)
+
+[node name="PickuppablePlant21" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7464, 0.0132747, 17.9555)
+
+[node name="PickuppablePlant22" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7464, 0.0132747, 14.9555)
+
+[node name="PickuppablePlant23" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7464, 0.0132747, 11.9555)
+
+[node name="PickuppablePlant24" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7464, 0.0132747, 13.9555)
+
+[node name="PickuppablePlant25" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7464, 0.0132747, 15.9555)
+
+[node name="PickuppablePlant26" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7464, 0.0132747, 16.9555)
+
+[node name="PickuppablePlant27" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.74644, 0.0132747, 11.9555)
+
+[node name="PickuppablePlant28" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.74644, 0.0132747, 8.95547)
+
+[node name="PickuppablePlant29" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74644, 0.0132747, 8.95547)
+
+[node name="PickuppablePlant30" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.74644, 0.0132747, 5.95547)
+
+[node name="PickuppablePlant31" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74644, 0.0132747, 7.95547)
+
+[node name="PickuppablePlant32" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.746437, 0.0132747, 6.95547)
+
+[node name="PickuppablePlant33" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25356, 0.0132747, 6.95547)
+
+[node name="PickuppablePlant34" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25356, 0.0132747, 10.9555)
+
+[node name="PickuppablePlant35" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25356, 0.0132747, 14.9555)
+
+[node name="PickuppablePlant36" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25356, 0.0132747, 13.9555)
+
+[node name="PickuppablePlant37" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2536, 0.0132747, 10.9555)
+
+[node name="PickuppablePlant38" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2536, 0.0132747, 10.9555)
+
+[node name="PickuppablePlant39" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2536, 0.0132747, 6.95547)
+
+[node name="PickuppablePlant40" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2536, 0.0132747, 5.95547)
+
+[node name="PickuppablePlant41" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2536, 0.0132747, 8.95547)
+
+[node name="PickuppablePlant42" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7503, 0.0132747, 14.3186)
+
+[node name="PickuppablePlant43" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7503, 0.0132747, 18.3186)
+
+[node name="PickuppablePlant44" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7503, 0.0132747, 18.3186)
+
+[node name="PickuppablePlant45" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7503, 0.0132747, 19.3186)
+
+[node name="PickuppablePlant46" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75026, 0.0132747, 18.3186)
+
+[node name="PickuppablePlant47" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75026, 0.0132747, 16.3186)
+
+[node name="PickuppablePlant48" parent="PickuppableObjects/Plants" instance=ExtResource("6_udsrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87854, 0.0132748, 16.9415)
